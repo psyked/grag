@@ -20,6 +20,9 @@
                 height: 200px;
                 border: 1px solid black;
                 float: left;
+                line-height: 200px;
+                text-align: center;
+                font-size: 50px;
             }
             table
             {
@@ -40,7 +43,7 @@
                 <tr>
                     <td><div class="rag" id="rag1"></div></td>
                     <td><div class="rag" id="rag2"></div></td>
-                    <td><div class="rag" id="rag3"></div></td>
+                    <td><div class="rag" id="rag3">TEXT</div></td>
                 </tr>
                 <tr><td colspan="3"><b>Initiated as arrays</b><br/><i>grag.init(['rag4','rag5','rag6'],['percentage2','percentage3','percentage4']);</i></td></tr>
                 <tr><td><input id="percentage2" />%</td><td><input id="percentage3" />%</td><td><input id="percentage4" />%</td></tr>
@@ -53,7 +56,7 @@
         <script type="text/javascript">
             grag.init('rag1','percentage1');
             grag.init('rag2','percentage1', {saturation:50});
-            grag.init('rag3','percentage1', {lightness:80});
+            grag.init('rag3','percentage1', {lightness:80, applyTo: 'color'});
             grag.init(['rag4','rag5','rag6'],['percentage2','percentage3','percentage4']);
         </script>   
     </body>

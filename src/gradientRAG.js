@@ -22,7 +22,8 @@ var grag = {
                 source : document.getElementById(percentageId[rag]),
                 options : {
                     saturation : 100,
-                    lightness : 50
+                    lightness : 50,
+                    applyTo : 'background'
                 },
 
                 percentage : 0,
@@ -57,7 +58,7 @@ var grag = {
                     console.log(this.options);
                     if(this.getPercentage() !== false)
                     {
-                        this.element.style.backgroundColor=grag.getRGB(this.percentage, this.options.saturation, this.options.lightness);
+                        this.element.style[this.options.applyTo]=grag.getRGB(this.percentage, this.options.saturation, this.options.lightness);
                     }
                 },
 
